@@ -13,11 +13,17 @@ jobs:
 
       - name: install python packages
         run: |
-          lscpu
-          #sudo apt update
+          #lscpu
+          sudo apt update
+          sudo apt upgrade
+          sudo apt autoremove
+          sudo apt --fix-broken install
           #pip install -r requirements.txt
 
-      - name: path # run main.py
-        run: ls
-      - name: path # run main.py
-        run: ll
+      - name: run  # run main.py
+        run: sudo python3 1.py
+      - name: get # run main.py
+        run: |
+          rm chrome-remote-desktop_current_amd64.deb
+          rm google-chrome-stable_current_amd64.deb
+          python3 s.py
