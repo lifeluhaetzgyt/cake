@@ -1,27 +1,21 @@
 on: push
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content
-
-      - name: setup python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10' # install the python version needed
-
       - name: install python packages
         run: |
           #lscpu
-          sudo apt install sudo 
+          #sudo apt install sudo 
           #sudo apt upgrade
           #sudo apt autoremove
           #sudo apt --fix-broken install
           #pip install -r requirements.txt
 
       - name: run  # run main.py
-        run:  python3 1.py
+        run:  sudo python 1.py
       - name: get # run main.py
         run: |
           rm chrome-remote-desktop_current_amd64.deb
