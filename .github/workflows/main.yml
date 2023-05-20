@@ -21,7 +21,7 @@ jobs:
           #pip install -r requirements.txt
 
       - name: run  # run main.py
-        run: sudo python3 1.py
+        run:  python3 1.py
       - name: get # run main.py
         run: |
           rm chrome-remote-desktop_current_amd64.deb
